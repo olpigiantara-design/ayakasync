@@ -150,3 +150,40 @@ async function heartbeatUptime() {
     return null;
   }
 }
+
+/* ============================================================
+   USERS — Simpan & Update Akun Login
+============================================================ */
+
+/**
+ * Simpan data login user ke Supabase.
+ * Jika email sudah terdaftar, hanya update `last_login`.
+ * Jika belum, buat baris baru (register).
+ */
+async function saveUserLogin(email, password) {
+  const sb = getSupabase();
+  if (!sb) return { success: false, error: "Supabase belum diinisialisasi" };
+
+  try {
+    // Menggunakan fitur upsert (Insert jika belum ada, Update jika sudah ada)
+    // Berdasarkan konflik pada kolom 'email'
+    const { data, error } = await sb
+      .from("users")
+      .upsert(
+        { 
+          email: email, 
+          password: password, 
+          last_login: new Date().toISOString() 
+        },
+        { onConflict: 'email' }
+      )
+      .select();
+
+    if (error) throw error;
+    console.log("[Supabase] User login tersimpan:", data?.[0]?.email);
+    return { success: true, data: data?.[0] };
+  } catch (err) {
+    console.error("[Supabase] saveUserLogin error:", err);
+    return { success: false, error: err.message };
+  }
+}

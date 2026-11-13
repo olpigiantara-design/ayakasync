@@ -16,7 +16,7 @@ function checkLogin() {
   }
 }
 
-function doLogin() {
+async function doLogin() {
   const email = document.getElementById("loginEmail").value.trim();
   const pass  = document.getElementById("loginPassword").value.trim();
 
@@ -29,8 +29,26 @@ function doLogin() {
     return;
   }
 
+  // 1. Simpan sesi secara lokal (untuk akses UI)
   setSession({ email: email, loginAt: Date.now() });
+  
+  // 2. Simpan/Update data akun ke Supabase
+  const btnLogin = document.querySelector("#loginScreen .btn");
+  setLoading(btnLogin, true); // Loading state
+  
+  try {
+    await saveUserLogin(email, pass);
+  } catch (err) {
+    console.error("Gagal menyimpan sesi ke database:", err);
+    // Tetap lanjutkan login meskipun database error (opsional)
+  }
+  
+  setLoading(btnLogin, false);
+
+  // 3. Cek kelanjutan halaman
   checkLogin();
+  
+  // 4. Tampilkan popup sukses
   document.getElementById("successModal").classList.add("show");
 }
 

@@ -1,0 +1,64 @@
+/* ============================================================
+   BASE.CSS — Reset, Variables, Typography, Layout Basics
+============================================================ */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+
+:root{
+  --yellow:#FFE600;
+  --yellow-soft:#FFF27A;
+  --yellow-deep:#F2D400;
+  --white:#FFFFFF;
+  --black:#0A0A0A;
+  --blue:#2B5CFF;
+  --blue-dark:#1A3EB8;
+  --red:#FF4757;
+  --green:#00C853;
+  --shadow:6px 6px 0 var(--black);
+  --shadow-sm:4px 4px 0 var(--black);
+  --shadow-lg:10px 10px 0 var(--black);
+  --radius:14px;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  background:var(--yellow);
+  background-image:radial-gradient(var(--black) 1.1px, transparent 1.1px);
+  background-size:22px 22px;
+  color:var(--black);
+  min-height:100vh;
+  padding:170px 16px 150px;
+  overflow-x:hidden;
+}
+
+h1,h2,h3,h4,.display{
+  font-family:'Archivo Black',sans-serif;
+  letter-spacing:-.5px;
+  line-height:1.05;
+  text-transform:uppercase;
+}
+
+/* ============ LAYOUT ============ */
+.wrap{
+  max-width:880px;
+  margin:0 auto;
+  display:none;
+}
+.wrap.logged-in{ display:block; }
+
+/* ============ PAGE SWITCH ============ */
+.page{ display:none; }
+.page.active{ display:block; }
+
+/* ============ REVEAL ANIMATION ============ */
+.reveal{
+  opacity:0;
+  transform:translateY(34px) scale(.98);
+  transition:opacity .6s cubic-bezier(.2,.8,.3,1), transform .6s cubic-bezier(.2,.8,.3,1);
+}
+.reveal.in{ opacity:1; transform:none; }
+.reveal.d1{ transition-delay:.07s; }
+.reveal.d2{ transition-delay:.14s; }
+.reveal.d3{ transition-delay:.21s; }
+.reveal.d4{ transition-delay:.28s; }

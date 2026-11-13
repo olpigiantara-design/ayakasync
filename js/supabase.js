@@ -15,7 +15,7 @@ function initSupabase() {
   try {
     supabaseClient = window.supabase.createClient(
       CONFIG.SUPABASE_URL,
-      CONFIG.SUPABASE_ANON_KEY
+      CONFIG.SUPABASE_SBP_KEY
     );
     console.log("[Supabase] Client initialized:", CONFIG.SUPABASE_URL);
     return supabaseClient;

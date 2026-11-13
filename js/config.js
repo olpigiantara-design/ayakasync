@@ -5,16 +5,16 @@
 
 const CONFIG = {
   /* ----- API Base URLs ----- */
-  BASE_URL: "https://api.izzxd.my.id",          // API utama (bulk, dll)
-  AI_BASE_URL: "https://api.ikyyxd.my.id",       // API endpoint AI Chat
+  BASE_URL: "",          // API utama (bulk, dll)
+  AI_BASE_URL: "",       // API endpoint AI Chat
 
   /* ----- API Keys ----- */
-  AM_API_KEY: "ayakasync",                        // API key untuk endpoint bulk
+  AM_API_KEY: "",                        // API key untuk endpoint bulk
   AI_SESSION_ID: "Ayaka-Sync",                    // Session ID chat AI
 
   /* ----- SUPABASE (BARU) ----- */
-  SUPABASE_URL: "https://xxxxxxxxxxxxxxxx.supabase.co",
-  SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.xxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxx",
+  SUPABASE_URL: "",
+  SUPABASE_SBP_KEY: "",
   // ↑ Ganti dengan URL & anon key dari Supabase Dashboard → Settings → API
 
   /* ----- Uptime Config (BARU) ----- */
@@ -24,11 +24,11 @@ const CONFIG = {
   /* ----- Alight Motion Internal API (Direct) ----- */
   ALIGHT: {
     ORDER_ID: "GPA",
-    API_KEY: "AIzaSyDtG1AU22ErnQZ60AzBAcaknySiz9_CEq0",
+    API_KEY: "",
     PRODUCT_ID: "am.full.sub.annual.19q4",
-    TOKEN: "mmgaobamlahbbeccfplmbkbb.AO-J1OzqG0or_GJJIx-ms8GrTm-jaglCRfhQSRPUZKpl2YspYS-oN7_94uv8RC5vQbvd_Ios2pPDStZ2n7F0hLE3FiOU7HS3R6Fquulv5xLXFECSv4ctElw",
+    TOKEN: "",
     SKU_TYPE: "subs",
-    FIREBASE_INSTANCE_ID_TOKEN: "cSDnCyp3T-uwp07z3tL86T:APA91bFkmvvsHw5nnqa1SBFci-99DRsKClLiETdRrVcJjS5yBx1v_FbCb1d8WhBuea_zmwnYBktyTIzcRhN4b6uNOUur9wPc0gKXmJDoZic0LhNq5V2s0xI",
+    FIREBASE_INSTANCE_ID_TOKEN: "",
     HEADERS: {
       "Content-Type": "application/json",
       "X-Android-Package": "com.alightcreative.motion",

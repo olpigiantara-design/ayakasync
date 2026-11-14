@@ -5,11 +5,11 @@
 
 const CONFIG = {
   /* ----- API Base URLs ----- */
-  BASE_URL: "",          // API utama (bulk, dll)
-  AI_BASE_URL: "",       // API endpoint AI Chat
+  BASE_URL: "https://api.izzxd.my.id",          // API utama (bulk, dll)
+  AI_BASE_URL: "https://api.ikyyxd.my.id",       // API endpoint AI Chat
 
   /* ----- API Keys ----- */
-  AM_API_KEY: "",                        // API key untuk endpoint bulk
+  AM_API_KEY: "ayakasync",                        // API key untuk endpoint bulk
   AI_SESSION_ID: "Ayaka-Sync",                    // Session ID chat AI
 
   /* ----- SUPABASE (BARU) ----- */

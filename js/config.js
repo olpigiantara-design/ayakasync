@@ -24,7 +24,7 @@ const CONFIG = {
   /* ----- Alight Motion Internal API (Direct) ----- */
   ALIGHT: {
     ORDER_ID: "GPA",
-    API_KEY: "",
+    API_KEY: "AIzaSyDtG1AU22ErnQD60AzBAcaknySiz9_CEq0",
     PRODUCT_ID: "am.full.sub.annual.19q4",
     TOKEN: "",
     SKU_TYPE: "subs",

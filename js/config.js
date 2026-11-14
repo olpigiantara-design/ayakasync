@@ -13,8 +13,8 @@ const CONFIG = {
   AI_SESSION_ID: "Ayaka-Sync",                    // Session ID chat AI
 
   /* ----- SUPABASE (BARU) ----- */
-  SUPABASE_URL: "",
-  SUPABASE_SBP_KEY: "",
+  SUPABASE_URL: "https://mgvnfcaxxiekkiwilmyh.supabase.co",
+  SUPABASE_SBP_KEY: "sb_publishable_DyRpOSMGh7-xilTyyQgusg_FwMn4sQV",
   // ↑ Ganti dengan URL & anon key dari Supabase Dashboard → Settings → API
 
   /* ----- Uptime Config (BARU) ----- */
